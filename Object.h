@@ -21,6 +21,24 @@ struct Object {
         SDL_RenderCopy(renderer, texture, nullptr, &obj);
     }
 };
+struct Apple {
+
+    SDL_Texture* texture;
+    SDL_Rect obj;
+    void AppleInit(){
+        int x; int y;
+        SDL_QueryTexture(texture, nullptr, nullptr, &x, &y);
+        obj.x = 801;
+        obj.w = x/50;
+        obj.h = y/50;
+        obj.y = rand() %(SCREEN_HEIGHT - 168 -y/50 +1);
+
+    }
+   void renderObject(SDL_Renderer* renderer){
+        SDL_RenderCopy(renderer, texture, nullptr, &obj);
+    }
+
+};
 
 
 

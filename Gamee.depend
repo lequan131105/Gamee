@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1714353577 source:d:\c++ game\game\gamee\main.cpp
+1714720764 source:d:\c++ game\game\gamee\main.cpp
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
@@ -10,9 +10,9 @@
 	<SDL_ttf.h>
 	"Object.h"
 
-1714281631 d:\c++ game\game\gamee\defs.h
+1714719605 d:\c++ game\game\gamee\defs.h
 
-1714352480 d:\c++ game\game\gamee\graphics.h
+1714716516 d:\c++ game\game\gamee\graphics.h
 	<bits/stdc++.h>
 	<SDL.h>
 	<SDL_image.h>
@@ -21,7 +21,7 @@
 	<SDL_mixer.h>
 	<SDL_ttf.h>
 
-1714353415 d:\c++ game\game\gamee\logic.h
+1714406113 d:\c++ game\game\gamee\logic.h
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
@@ -31,9 +31,19 @@
 	<SDL_ttf.h>
 	"Object.h"
 
-1714237727 d:\c++ game\game\gamee\object.h
+1714382955 d:\c++ game\game\gamee\object.h
 	<bits/stdc++.h>
 	"defs.h"
 	"graphics.h"
 	"logic.h"
+
+1714718054 d:\c++ game\game\gamee\menu.h
+	<SDL.h>
+	<SDL_image.h>
+	"defs.h"
+	"graphics.h"
+	"logic.h"
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"Object.h"
 

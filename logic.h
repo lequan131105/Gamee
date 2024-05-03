@@ -64,12 +64,14 @@ void check(int &x, int &y, Mouse mouse){
         mouse.y = 0;
     if(mouse.y > SCREEN_HEIGHT - 168)
         mouse.y = SCREEN_HEIGHT -168;
+    if(mouse.x + 182/2 > SCREEN_WIDTH)
+        mouse.x = SCREEN_WIDTH - 182/2;
     x = mouse.x;
     y = mouse.y;
 
 }
 
-bool isCollision(int &x, int &y, const vector <Object>& plane) {
+bool isCollisionPlane(int &x, int &y, const vector <Object>& plane) {
 
     for(int i = 0 ;i < 8; i++)
     if (x < plane[i].obj.x + PLANE_WIDTH-10 &&
@@ -80,7 +82,22 @@ bool isCollision(int &x, int &y, const vector <Object>& plane) {
     }
     return false;
 }
-void checkMove (vector <Object> &plane, int x ){
+
+bool isCollisionApple(int &x, int &y, vector <Apple>& apple, int &numApple ) {
+
+    for(int i = 0 ;i < 4; i++)
+    if (x < apple[i].obj.x + 30-10 &&
+        x + 182/2 > apple[i].obj.x+10 &&
+        y < apple[i].obj.y + 30-20 &&
+        y + 168/2 > apple[i].obj.y+20) {
+        numApple ++;
+        apple[i].obj.y -= SCREEN_WIDTH;
+        return true;
+
+    }
+    return false;
+}
+void checkMovePlane (vector <Object> &plane, int x ){
         if(x <500){
             plane[1].obj.x -= OBJECT_SPEED;
         }
@@ -101,6 +118,19 @@ void checkMove (vector <Object> &plane, int x ){
         }
         if(plane[6].obj.x <500){
             plane[7].obj.x -= OBJECT_SPEED;
+        }
+
+}
+
+void checkMoveApple (vector <Apple> &apple, int x){
+        if(x< 200){
+            apple[1].obj.x -= OBJECT_SPEED;
+        }
+        if(apple[1].obj.x < 200){
+            apple[2].obj.x -= OBJECT_SPEED;
+        }
+        if(apple[2].obj.x < 200){
+            apple[3].obj.x -= OBJECT_SPEED;
         }
 
 }

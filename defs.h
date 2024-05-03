@@ -6,11 +6,23 @@ const int SCREEN_HEIGHT = 600;
 const int SCREEN_WIDTH = 800;
 const char * WINDOW_TITLE = "Hello World";
 const int INITIAL_SPEED =10;
+const char* APPLE_SPRITE_FILE = "apple.png";
 const char* BIRD_SPRITE_FILE = "bird.png";
 const char* PLANE_SPRITE_FILE = "af1.png";
 const int PLANE_WIDTH = 80;
 const int PLANE_HEIGHT = 33;
+const char*SOUND_EFFECT_FILE = "appleGain.wav";
 const int OBJECT_SPEED = 10;
+const int CenterX = 396;
+const int CenterY = 319;
+const int Radius = 64;
+enum Gamestatus {
+    inMenu,
+    start,
+    pause,
+    gameover,
+    quitgame,
+};
 const int BIRD_CLIPS[][4] = {
     {0, 0, 182, 168},
     {181, 0, 182, 168},
